@@ -1,7 +1,9 @@
 package jack.service
 
 import jack.command.PersonCommand
+import javax.inject.Singleton
 
+@Singleton
 class PersonServiceImpl implements PersonService{
 
   List<PersonCommand> getPeople() {
