@@ -17,9 +17,11 @@ import javax.ws.rs.core.Response
 @Path("/people")
 class PeopleController {
 
-  @Inject
   PersonService personService
-  @Inject
+
+  PeopleController(PersonService personService) {
+    this.personService = personService
+  }
 
   @GET
   @Path("/developers")

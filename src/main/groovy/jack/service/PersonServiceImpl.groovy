@@ -11,8 +11,11 @@ import javax.transaction.Transactional
 @Singleton
 class PersonServiceImpl implements PersonService {
 
-  @Inject
   PersonRepository personRepository
+
+  PersonServiceImpl(PersonRepository personRepository) {
+    this.personRepository = personRepository
+  }
 
   @Override
   @Transactional

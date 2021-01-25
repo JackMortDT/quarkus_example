@@ -16,8 +16,11 @@ import javax.ws.rs.core.MediaType
 @Consumes(MediaType.APPLICATION_JSON)
 class PersonController {
 
-  @Inject
   PersonService personService
+
+  PersonController(PersonService personService) {
+    this.personService = personService
+  }
 
   @GET
   @Path("/developer_by_name/{name}")

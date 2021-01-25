@@ -16,8 +16,11 @@ import javax.inject.Inject
 @GraphQLApi
 class FilmEndpoint {
 
-  @Inject
   GalaxyService galaxyService
+
+  FilmEndpoint(GalaxyService galaxyService) {
+    this.galaxyService = galaxyService
+  }
 
   @Query("allFilms")
   @Description("Get all Films from a galaxy far far away")
