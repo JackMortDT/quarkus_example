@@ -3,7 +3,6 @@ package jack.controller
 import jack.command.PersonCommand
 import jack.service.PersonService
 
-import javax.inject.Inject
 import javax.ws.rs.Consumes
 import javax.ws.rs.GET
 import javax.ws.rs.Path

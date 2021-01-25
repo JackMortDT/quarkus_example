@@ -11,8 +11,6 @@ import org.eclipse.microprofile.graphql.Name
 import org.eclipse.microprofile.graphql.Query
 import org.eclipse.microprofile.graphql.Source
 
-import javax.inject.Inject
-
 @GraphQLApi
 class FilmEndpoint {
 

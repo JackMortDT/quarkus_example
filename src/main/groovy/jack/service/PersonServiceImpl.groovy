@@ -4,7 +4,6 @@ import jack.command.PersonCommand
 import jack.domain.Person
 import jack.repository.PersonRepository
 
-import javax.inject.Inject
 import javax.inject.Singleton
 import javax.transaction.Transactional
 
