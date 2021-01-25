@@ -12,6 +12,10 @@ class PersonRepository implements PanacheRepository<Person> {
     find("name", name).firstResult()
   }
 
+  List<Person> listByName(String name) {
+    list("name", name)
+  }
+
   List<Person> list() {
     listAll()
   }

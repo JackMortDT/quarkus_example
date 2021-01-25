@@ -7,6 +7,7 @@ interface PersonService {
 
   List<PersonCommand> getPeople()
   PersonCommand getPersonByName(String name)
+  List<PersonCommand> getPeopleByName(String name)
   PersonCommand saveNewDeveloper(Person person)
 
 }

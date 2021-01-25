@@ -30,6 +30,13 @@ class PersonServiceImpl implements PersonService {
 
   @Override
   @Transactional
+  List<PersonCommand> getPeopleByName(String name) {
+    List<Person> people = personRepository.listByName(name)
+    people.collect() { PersonCommand.toPersonCommand(it) }
+  }
+
+  @Override
+  @Transactional
   PersonCommand saveNewDeveloper(Person person) {
     personRepository.persist(person)
   }
