@@ -24,6 +24,7 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy-jackson'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-resteasy'
+    testImplementation 'io.quarkus:quarkus-panache-mock:test'
     testImplementation 'org.spockframework:spock-core:2.0-M4-groovy-3.0'
     testImplementation 'io.quarkus:quarkus-junit5'
 }
