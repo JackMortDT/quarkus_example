@@ -4,10 +4,10 @@ import jack.command.PersonCommand
 import jack.domain.Person
 import jack.repository.PersonRepository
 
-import javax.inject.Singleton
+import javax.enterprise.context.ApplicationScoped
 import javax.transaction.Transactional
 
-@Singleton
+@ApplicationScoped
 class PersonServiceImpl implements PersonService {
 
   PersonRepository personRepository
