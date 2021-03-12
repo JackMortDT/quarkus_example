@@ -1,6 +1,7 @@
 package jack.repository
 
 import io.quarkus.hibernate.orm.panache.PanacheRepository
+import io.quarkus.panache.common.Parameters
 import jack.domain.Person
 
 import javax.inject.Singleton
@@ -18,5 +19,9 @@ class PersonRepository implements PanacheRepository<Person> {
 
   List<Person> list() {
     listAll()
+  }
+
+  List<Person> findAllByAgeGreaterThan(Integer age) {
+    find("age > :age", Parameters.with("age", age)).list()
   }
 }
