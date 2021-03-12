@@ -20,18 +20,18 @@ class PersonServiceSpec extends Specification {
       def personRepository = Mock(PersonRepository)
       personService.personRepository = personRepository
     when: "the method is executed"
-      List<PersonCommand> result = personService.getPeople()
+      List<Person> people = personService.getPeople()
     then:
-      1 * personRepository.list() >> people()
-      assert result.size() == 4
+      1 * personRepository.list() >> getPeople()
+      assert people.size() == 4
   }
 
-  List<Person> people() {
+  static List<Person> getPeople() {
     [
         new Person(id: 1, name: "Jack", lastName: "Mort", age: 10),
-        new Person(id: 1, name: "Luis", lastName: "Sastré", age: 24),
-        new Person(id: 1, name: "José", lastName: "Cruz", age: 25),
-        new Person(id: 1, name: "Jack", lastName: "Mort", age: 25)
+        new Person(id: 2, name: "Luis", lastName: "Sastré", age: 24),
+        new Person(id: 3, name: "José", lastName: "Cruz", age: 25),
+        new Person(id: 4, name: "Jack", lastName: "Mort", age: 25)
     ]
   }
 
