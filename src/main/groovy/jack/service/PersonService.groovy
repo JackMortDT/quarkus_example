@@ -5,9 +5,13 @@ import jack.domain.Person
 
 interface PersonService {
 
-  List<PersonCommand> getPeople()
-  PersonCommand getPersonByName(String name)
-  List<PersonCommand> getPeopleByName(String name)
-  PersonCommand saveNewDeveloper(Person person)
+  Person getPersonByName(String name)
+
+  List<Person> getPeople()
+  List<Person> getPeopleByName(String name)
+  List<Person> findAllByAgeGreaterThan(Integer age)
+
+  Void saveNewDeveloper(PersonCommand person)
+
 
 }
